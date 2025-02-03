@@ -1,8 +1,9 @@
 "use client"
 import Shopcards from '@/components/Shopcards'
+
 import Policy from '@/components/Policy'
 import AllBaners from '@/components/AllBaners'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 
 
 const Shoppage = () => {
@@ -44,12 +45,16 @@ const Shoppage = () => {
             className='w-[200px] p-2  rounded-t-lg' />
         </div>
       </div>
-
+<Suspense fallback={<div>jiiiiiiiiiiiiiiiii...</div>}>
       <Shopcards
         search={search}
         filter={filter}
       />
+      </Suspense>
+
+      <Suspense fallback={<div>jiiiiiiiiiiiiiiiii...</div>}>
       <Policy />
+       </Suspense>
     </>
   )
 }

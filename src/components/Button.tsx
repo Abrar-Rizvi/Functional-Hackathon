@@ -6,7 +6,7 @@ interface ButtonI {
 }
 const Button = ({content, classname, onClick}: ButtonI) => {
   return (
-    <div className={`${classname}`} onClick={onClick} >{content}</div>
+    <button className={`${classname}`} onClick={onClick} >{content}</button>
   )
 }
 

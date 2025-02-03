@@ -32,9 +32,11 @@ const FeaturePeoducts = () => {
   //Fetched data from sanity by using GROQ
 
   useEffect(() => {
+   
 
     const fetchDataFromSanity = async () => {
       try {
+       
         const products: Product[] = await client.fetch(`*[_type == "product" ]{
            id,
       name,
@@ -60,27 +62,26 @@ const FeaturePeoducts = () => {
 
   return (
     <div className='main-container py-[50px] px-4 md:px-8'>
-      <div className={`heading-para font-medium  text-center ${poppins.className}`} >
-        <h2 className={`text-[28px] md:text-[36px] md:m-[10px]`}>Top Picks For You</h2>
-        <p className='text-[14px] md:text-[16px] lg:text-[18px] text-[#9F9F9F]'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</p>
-      </div>
+     
 
-      (
-      <div className='main-container py-[50px] px-4 md:px-8'>
+      
+      <div className='main-container px-4 md:px-8'>
         <div className={`heading-para font-medium text-center ${poppins.className}`}>
-          <h2 className='text-[28px] md:text-[36px] md:m-[10px]'>Top Picks For You</h2>
-          <p className='text-[14px] md:text-[16px] lg:text-[18px] text-[#9F9F9F]'>
+          <h2 className='text-[28px] mb-3 md:text-[36px] md:m-[10px]'>Top Picks For You</h2>
+          <p className='text-[14px]  mb-5 md:text-[16px] lg:text-[18px] text-[#9F9F9F]'>
             Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.
           </p>
         </div>
         {error ? (
           <div className='text-center text-red-500'>{error}</div>
         ) : (
-          <div className='flex flex-col gap-4 justify-center flex-wrap md:p-[30px] md:flex-row'>
+          <div className='flex flex-col gap-8 justify-center flex-wrap md:p-[30px] md:flex-row'>
             {featureProducts &&
               featureProducts.map((product: Product) => (
                 <Link key={product.id} href="/shop">
-                  <div className='flex flex-col bg-[#faf4f4] h-[400px] md:w-[300px] items-center cursor-pointer'>
+                  <div className='flex flex-col bg-[#faf4f4] h-[400px] md:w-[300px] items-center cursor-pointer
+                  hover:scale-105 duration-300 rounded-t-lg hover:shadow-2xl
+                  '>
                     <div className='h-[75%] w-[90%] overflow-hidden rounded-t-lg'>
                       <Image
                         src={product.imagePath}
@@ -90,7 +91,7 @@ const FeaturePeoducts = () => {
                         className='w-full h-full object-cover hover:scale-105 duration-300 rounded-t-lg'
                       />
                     </div>
-                    <div className={`${poppins.className} text-center pt-5`}>
+                    <div className={`${poppins.className}  text-center pt-5`}>
                       <p className='md:text-[16px] font-normal'>{product.name}</p>
                       <p className='md:text-[24px] font-bold'>RS. {product.price}</p>
                     </div>

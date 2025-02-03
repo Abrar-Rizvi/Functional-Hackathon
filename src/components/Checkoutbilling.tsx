@@ -20,8 +20,9 @@ const CheckoutForm = () => {
 
         {/* this div for first two input to arrang in row */}
 
-        <div className="flex   gap-4 ">
-          <div className="flex flex-col space-y-1 text-lg font-medium">
+        <div className="md:flex    gap-4 ">
+       
+         <div className="flex flex-col space-y-1 text-lg font-medium">
             <label htmlFor="name">First Name</label>
             <input
               type="text"
@@ -41,6 +42,7 @@ const CheckoutForm = () => {
               className="flex-1 w-full px-4 py-2 border border-gray-300 rounded-md"
             />
           </div>
+     
         </div>
 
         {/* From here all inputs are child of form elements direcly */}

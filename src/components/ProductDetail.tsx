@@ -28,7 +28,7 @@ const ProductDetails = ({ product, relatedProducts }: ProductDetailsProps) => {
   const {addToFavourite} = useCart();
 
   return (
-    <div>
+    <div className="">
       <div className="w-full h-[100px]">
         <p className="pl-[60px] text-sm sm:text-base md:text-lg">
           <span className="text-[#9F9F9F] mx-2">Home</span>
@@ -106,3 +106,23 @@ const ProductDetails = ({ product, relatedProducts }: ProductDetailsProps) => {
 };
 
 export default ProductDetails;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

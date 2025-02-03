@@ -26,13 +26,13 @@ const Policy = () => {
     },
   ]
   return (
-    <div className='bg-[#FAF4F4] md:h-[200px]  flex flex-col md:flex-row md:justify-between md:items-center lg:flex-row lg:justify-between lg:items-center 
+    <div className='bg-[#FAF4F4] md:h-[200px] py-10 flex flex-col md:flex-row md:justify-between md:items-center lg:flex-row lg:justify-between lg:items-center 
     
-    lg:px-[50px] px-[50px] lg:space-x-10'>
+     px-[50px] space-y-5 md:space-y-0 lg:space-x-10'>
       {policyCards.map( (card) => {
-        return <div key={card.id} className='text-left w-full md:w-[150px] lg:w-[300px]  mt-[20px] '>
+        return <div key={card.id} className='text-left w-full   '>
          <div>
-         <h4 className='text-[24px] md:text-[28px] font-bold'>{card.h2}</h4>
+         <h4 className=' text-[24px] md:text-[28px] font-bold'>{card.h2}</h4>
           <p className='text-[14px] md:text-[16px] font-medium text-[#9F9F9F] '>
             {card.description}
           </p>

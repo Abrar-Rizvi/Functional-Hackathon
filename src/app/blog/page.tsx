@@ -24,14 +24,14 @@ const Blogpage = () => {
           <Istpost src="/pic3.jpg" span="Wood" h1Text="Going all-in with millennial design" />
 
           {/* pagination button */}
-          <div className=" flex justify-end">
+          {/* <div className=" flex justify-end">
             <div className="flex justify-center mt-[50px] gap-10 items-center">
               <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-[#fbebb5] flex justify-center items-center">1</div>
               <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-[#FFF9E5] flex justify-center items-center">2</div>
               <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-[#FFF9E5] flex justify-center items-center">2</div>
               <div className="w-[78px] md:w-[98px] h-[40px] md:h-[60px] bg-[#FFF9E5] flex justify-center items-center">Next</div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* right side */}
@@ -54,10 +54,10 @@ const Blogpage = () => {
           </div>
 
           <div className='space-y-10 mt-24'>
-            <h2 className='font-semibold text-[20px] '>RecentPosts</h2>
+            <h2 className='font-semibold text-[20px]'>RecentPosts</h2>
             <Recentpost src="/b1.jpg" detail="Going all-in with millennial design" />
             <Recentpost src="/b2.jpg" detail="Exploring new ways of decorating" />
-            <Recentpost src="/b3.jpg" detail="Modern home in Milan" />
+            <Recentpost src="/b3.jpg" detail="Modern home in Milan"/>
             <Recentpost src="/b4.jpg" detail="Going all-in with millennial design" />
             <Recentpost src="/b5.jpg" detail="Going all-in with millennial design" />
 
@@ -66,6 +66,14 @@ const Blogpage = () => {
         </div>
 
       </div>
+      <div className=" ">
+            <div className="flex justify-center mt-[50px] gap-10 items-center">
+              <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-[#fbebb5] flex justify-center items-center">1</div>
+              <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-[#FFF9E5] flex justify-center items-center">2</div>
+              <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-[#FFF9E5] flex justify-center items-center">2</div>
+              <div className="w-[78px] md:w-[98px] h-[40px] md:h-[60px] bg-[#FFF9E5] flex justify-center items-center">Next</div>
+            </div>
+          </div>
       <Policy />
 
     </div>
