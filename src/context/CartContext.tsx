@@ -200,9 +200,23 @@ export interface CartItem {
   price: number;
   quantity: number;
 }
+interface Product {
+  id: string;
+  name: string;
+  imagePath: string;
+  price: number;
+  description: string;
+  discountPercentage: number;
+  isFeaturedProduct: boolean;
+  stockLevel: number;
+  category: string;
+  quantity: number;
+}
 
 interface CartContextType {
   cart: CartItem[];
+  products: Product[] | null;
+  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
   favourite: CartItem[];
   addToCart: (product: CartItem) => void;
   removeFromCart: (id: string) => void;
@@ -215,6 +229,8 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [favourite, setFavourite] = useState<CartItem[]>([]);
+    const [products, setProducts] = useState<Product[]>([]);
+  
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [cart, setCart] = useState<CartItem[]>(() => {
     // ✅ Check if window is defined to avoid SSR errors
@@ -277,7 +293,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, addToFavourite, totalPrice, favourite, clearCart }}
+      value={{ cart, products, setProducts, addToCart, removeFromCart, addToFavourite, totalPrice, favourite, clearCart }}
     >
       {children}
     </CartContext.Provider>

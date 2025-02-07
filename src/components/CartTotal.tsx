@@ -15,7 +15,8 @@ const CartTotal = () => {
   const { totalPrice } = useCart()
   console.log(totalPrice)
   return (
-    <div className='max-w-[60%]'>
+    <div className='w-full lg:max-w-[25%]'>
+    {/* <> */}
       {/* Cart total box sections starting......................................................... */}
       <div className=' w-full bg-[#FFF9E5]  '>
         <div className=' py-3 px-12 space-y-8 flex flex-col items-between'>
@@ -42,6 +43,7 @@ const CartTotal = () => {
 
       {/* Cart total box sections ending......................................................... */}
     </div>
+
   )
 }
 

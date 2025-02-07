@@ -45,7 +45,7 @@ const Descriptive = ({ pics, relatedProData }: DescriptiveProps) => {
           Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
         </p>
       </div>
-      <div className=" flex flex-col items-center sm:flex sm:flex-row sm:justify-around sm:items-center px-[30px]  lg:space-y-0">
+      <div className=" flex flex-col items-center sm:flex sm:flex-row sm:justify-around sm:items-center px-[30px] space-y-4  lg:space-y-0">
         <Image src={pics} alt="image" width={300} height={300} className=" sm:w-[30%] sm:h-[150px] md:w-[40%]
          md-[350px] lg:w-[45%] lg:h-[300px] object-contain lg:object-cover" />
 
@@ -55,10 +55,10 @@ const Descriptive = ({ pics, relatedProData }: DescriptiveProps) => {
 
       <div className='main-container py-[50px]'>
         <div className={`heading-para font-medium  text-center ${poppins.className}`} >
-          <h2 className={` text-[36px] md:m-[10px]`}>Related Products</h2>
+          <h2 className={` text-[36px] m-[10px] `}>Related Products</h2>
 
         </div>
-        <div className='flex flex-col items-center justify-center  md:p-[30px] md:flex md:flex-row  space-y-7 md:space-x-7  '>
+        <div className='flex flex-col items-center justify-center  md:p-[30px] md:flex md:flex-row  space-y-7 md:space-y-0 md:space-x-7  '>
           {relatedProData.map((pic: Product) => {
             return <Link key={pic.id} href="/shop" >
               <div className='w-full px-[30px] md:px-0 md:w-[200px] md:h-[300px] flex   flex-col justify-center items-center cursor-pointer transform transition-transform duration-300 hover:scale-110'>

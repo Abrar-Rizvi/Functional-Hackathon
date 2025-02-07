@@ -18,7 +18,7 @@ const CheckoutDetails = () => {
     const { cart } = useCart()
     console.log(totalPrice)
     return (
-        <div className={`flex flex-col  px-10 py-24 ${poppins.className} space-y-5`}>
+        <div className={`flex flex-col w-full  px-10 py-24 ${poppins.className} space-y-5`}>
             <div className="section border-b-0.5 border-[#D9D9D9] space-y-2 pb-5  max-w-[500px]">
                 <div className="item text-[20px] font-medium">
                     <h2>Product</h2>
